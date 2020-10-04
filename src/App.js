@@ -4,9 +4,13 @@ import keys from "./keys";
 
 const DrumKey = ({ drumKey, playAudio }) => {
   return (
-    <div className="drum-pad" onClick={() => playAudio(drumKey.key)}>
+    <div
+      id={`drum-pad-${drumKey.key}`}
+      className="drum-pad"
+      onClick={() => playAudio(drumKey.key)}
+    >
       {drumKey.key}
-      <audio id={drumKey.key} src={drumKey.url} />
+      <audio id={drumKey.key} className="clip" src={drumKey.url} />
     </div>
   );
 };
@@ -36,6 +40,7 @@ export default function App() {
   }, []);
   return (
     <div className="App">
+      <h1>Drum Machine</h1>
       <div id="drum-machine">
         <div id="display">{message}</div>
         <div id="keys">

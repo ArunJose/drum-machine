@@ -5,20 +5,27 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-direction: column;
 }
 
 #drum-machine {
   border: solid 1px black;
-  height: 20rem;
+  height: 22rem;
   width: 20rem;
+}
+
+#display {
+  height: 2rem;
+  font-size: 18pt;
+  padding: 0.3rem;
+  margin-top: 0.4rem;
 }
 
 #keys {
   display: flex;
   height: 18rem;
-  width: 18rem;
+  width: 100%;
   flex-wrap: wrap;
-  align-content: space-evently;
   justify-content: center;
 }
 
@@ -27,4 +34,7 @@
   height: 5rem;
   width: 5rem;
   margin: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
